@@ -1,0 +1,114 @@
+$primary-bg : #1b1b1b;
+$secondary-bg : #444444;
+$primary-btn : #C80425;
+$secondary-btn : #a5031e;
+$p-1 : 1em;
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+#root{
+    height: 100%;
+    width: 100%;
+    .notes-container{
+        height: 100vh;
+        background-color: $primary-bg;
+        display: grid;
+        grid-template-columns: 20vw 80vw;
+        .notes{
+            box-sizing: border-box;
+            width : 100%;
+            height: 100%;
+            padding: $p-1;
+            display: flex;
+            flex-direction: column;
+            overflow-y: scroll;
+            .note{
+                margin-top: $p-1;
+                cursor: pointer;
+                transition-duration: .3s;
+                width: 100%;
+                box-sizing: inherit;
+                padding: $p-1;
+                .title{
+                    font-size: 2em;
+                    color: $primary-btn;
+                }
+                .content{
+                    color: white;
+                }
+                &:hover{
+                    background-color: $secondary-bg;
+                }
+            }
+            .add-btn{
+                background-color: $primary-btn;
+                outline: none;
+                border: none;
+                padding: $p-1;
+                color: white;
+                font-size: 1.5em;
+                cursor: pointer;
+                transition-duration: 0.2s;
+                .bold{
+                    font-weight: bolder;
+                }
+                &:hover{
+                    background-color: $secondary-btn;
+                    transform: scale(1.05);
+                }
+            }
+        }
+        .current{
+            box-sizing: border-box;
+            width: 100%;
+            height: 100%;
+            padding: $p-1;
+            color: white;
+            .new{
+                width: 100%;
+                height: 100%;
+                display: grid;
+                grid-template-rows: 50% 50%;
+                .preview{
+                    height: 100%;
+                    width: 100%;
+                    .title{
+                        font-size: 2em;
+                        color: $primary-btn;
+                    }
+                }
+                .text{
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    overflow: hidden;
+                    .textarea{
+                        height: 50%;
+                    }
+                    .submit-btn{
+                        background-color: $primary-btn;
+                        outline: none;
+                        border: none;
+                        padding: $p-1;
+                        color: white;
+                        font-size: 1.5em;
+                        cursor: pointer;
+                        transition-duration: 0.2s;
+                        .bold{
+                            font-weight: bolder;
+                        }
+                        &:hover{
+                            background-color: $secondary-btn;
+                            transform: scale(1.05);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
