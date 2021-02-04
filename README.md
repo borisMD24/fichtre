@@ -1,3 +1,7 @@
+#fichtre
+
+j'ai rm-rf mon dossier, j'ai donc du recommencer et je n'ai fait que le stricte minimum (voire peut-etre un peu moins)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
